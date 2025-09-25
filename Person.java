@@ -1,4 +1,4 @@
-public class Person {
+ class Person {
   private String name;
   private String contactNumber;
   
@@ -17,6 +17,9 @@ public class Person {
   
   //setters 
   public void setName(String name) {
-    
+    this.name = name;
+  }
+  public void setContactNumb(String contactNumb) {
+    this.contactNumb = contactNumb;
   }
 }
