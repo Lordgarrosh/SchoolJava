@@ -1,3 +1,4 @@
+ package School;
  class Employee extends Person{
   private double salary;
   private String department;
@@ -22,5 +23,13 @@ public void setSalary(double salary) {
 }
 public void setDepartment(String department) {
   this.department = department;
+}
+
+//toString method for putting data
+@Override
+public String toString(){
+  return super.toString() +
+   "Salary: " + this.getSalary + "\n" + 
+   "Department: " + this.getDepartment + "\n";
 }
 }

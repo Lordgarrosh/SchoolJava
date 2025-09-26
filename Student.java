@@ -1,3 +1,4 @@
+ package School;
  class Student extends Person{
    private String program;
    private int yearLevel;
@@ -22,5 +23,18 @@
      this.program = program;
    }
    
-   public 
+   public void setYearLevel(int yearLevel) {
+     this.yearLevel = yearLevel;
+   }
+   
+   
+   
+   //tostrint method 
+   @Override
+   public String toString() {
+     return super.toString() + "\n" +
+     "Program: " + this.getProgram() + "\n" +
+     "Year Level: " + this.getYearLevel + 
+     "\n";
+   }
 }

@@ -1,3 +1,4 @@
+package School;
  class Person {
   private String name;
   private String contactNumber;
@@ -15,11 +16,21 @@
     return contactNumb;
   }
   
+  //enter users info
+  
   //setters 
   public void setName(String name) {
     this.name = name;
   }
   public void setContactNumb(String contactNumb) {
     this.contactNumb = contactNumb;
+  }
+  
+  
+  
+  @Override
+  public String toString(){
+    return "Name: " + this.getName() + "\n" +
+    "Contact Number: " + this.getContactNumb() + "\n";
   }
 }
