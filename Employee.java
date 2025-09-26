@@ -29,7 +29,7 @@ public void setDepartment(String department) {
 @Override
 public String toString(){
   return super.toString() +
-   "Salary: " + this.getSalary + "\n" + 
-   "Department: " + this.getDepartment + "\n";
+   "Salary: " + this.getSalary() + "\n" + 
+   "Department: " + this.getDepartment() + "\n";
 }
 }

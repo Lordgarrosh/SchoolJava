@@ -34,7 +34,7 @@
    public String toString() {
      return super.toString() + "\n" +
      "Program: " + this.getProgram() + "\n" +
-     "Year Level: " + this.getYearLevel + 
+     "Year Level: " + this.getYearLevel() + 
      "\n";
    }
 }
