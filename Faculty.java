@@ -1,4 +1,4 @@
-package School;
+package SchoolJava;
 class Faculty extends Employee{
   private boolean status;
   
@@ -6,10 +6,12 @@ class Faculty extends Employee{
     super(name, contactNumber, salary, department);
     this.status = status;
   }
+Faculty() {
+}
   
   //getters 
   public boolean getStatus() {
-    return status
+    return status;
   }
   
   //setters
@@ -19,7 +21,7 @@ class Faculty extends Employee{
   
   //tostring methods
   public String toString() {
-    return  super.toString + "\n" +
-    "Status: " + (this.getStatus) ? this.getName() + " is available" : this.getName() + " is currently not available";
+    return  super.toString() + "\n" +
+    "Status: " + ((this.getStatus()) ? this.getName() + " is available" : this.getName() + " is currently not available");
   }
 }

@@ -1,12 +1,14 @@
- package School;
+ package SchoolJava;
  class Student extends Person{
    private String program;
    private int yearLevel;
    
-   Student(String name, String contactNumb, String program, int level) {
+   Student(String name, String contactNumb, String program, int yearLevel) {
      super(name, contactNumb);
      this.program = program;
      this.yearLevel = yearLevel;
+   }
+   Student() {
    }
    
    // getters

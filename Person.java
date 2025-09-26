@@ -1,13 +1,14 @@
-package School;
+package SchoolJava;
  class Person {
   private String name;
-  private String contactNumber;
+  private String contactNumb;
   
   Person (String name, String contactNumb) {
     this.name = name;
     this.contactNumb = contactNumb;
   }
-  
+  Person() {
+  }
   //getters
   public String getName(){
     return name;
@@ -27,6 +28,11 @@ package School;
   }
   
   
+public Person test() {
+  System.err.println("ts");
+return new Student("asd", "asd", "", 1);
+}
+
   
   @Override
   public String toString(){

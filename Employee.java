@@ -1,4 +1,4 @@
- package School;
+ package SchoolJava;
  class Employee extends Person{
   private double salary;
   private String department;
@@ -9,6 +9,8 @@
    this.department = department;
   }
   
+  Employee() {
+  }
   //getters 
   public double getSalary() {
     return salary;
