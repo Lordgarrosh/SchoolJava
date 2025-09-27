@@ -31,7 +31,7 @@ public void setDepartment(String department) {
 @Override
 public String toString(){
   return super.toString() +
-   "Salary: " + this.getSalary() + "\n" + 
-   "Department: " + this.getDepartment() + "\n";
+   "Salary: " + String.format("%.2f", this.getSalary())  + "\n" + 
+   "Department: " + this.getDepartment();
 }
 }

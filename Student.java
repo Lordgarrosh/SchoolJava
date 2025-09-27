@@ -34,9 +34,8 @@
    //tostrint method 
    @Override
    public String toString() {
-     return super.toString() + "\n" +
+     return super.toString() + 
      "Program: " + this.getProgram() + "\n" +
-     "Year Level: " + this.getYearLevel() + 
-     "\n";
+     "Year Level: " + this.getYearLevel() ;
    }
 }

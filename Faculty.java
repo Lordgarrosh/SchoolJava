@@ -22,6 +22,6 @@ Faculty() {
   //tostring methods
   public String toString() {
     return  super.toString() + "\n" +
-    "Status: " + ((this.getStatus()) ? this.getName() + " is available" : this.getName() + " is currently not available");
+    "Status: " + ((this.getStatus()) ? this.getName() + " is regular" : this.getName() + " is currently not regular");
   }
 }
