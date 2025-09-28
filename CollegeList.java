@@ -1,15 +1,22 @@
 package SchoolJava;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-public class Main {
+public class CollegeList {
+  //the main class
   public static void main(String[]args) {
     Scanner scan = new Scanner(System.in);
     
-    boolean isRunning = true;
-    while (isRunning) {
-      System.out.print("Press E for Employee, F for Faculty or S for Student: ");
+    
+    while (true) {
+      System.out.print("Press E for Employee, F for Faculty, S for Student and B to exit the program: ");
+      //to make sure that the userinput will be uppercase
       char userRole = Character.toUpperCase(scan.next().charAt(0));
-      if (userRole != 'E' && userRole != 'F' && userRole != 'S') {
+     if (userRole == 'B') {
+      System.out.println("Exiting the program...");
+      System.out.println("Goodbye");
+      break;
+     }
+      else if (userRole != 'E' && userRole != 'F' && userRole != 'S') {
         System.out.println("Please enter only from the choices given only");
         continue;
       }
@@ -23,6 +30,7 @@ public class Main {
       char status;
       String program;
       int yearLevel;
+      //to catch if there is inputmismatch exeption
       try {
       switch (userRole) {
         case 'E' : 
@@ -31,8 +39,10 @@ public class Main {
         scan.nextLine();
         System.out.print("Enter your Department: ");
          department = scan.nextLine();
+         System.out.println("---------------------------");
         Employee employee = new Employee(name, contactNumber, salary, department);
-        System.out.println( employee.toString());
+        System.out.println(employee);
+        System.out.println("---------------------------");
         break;
         case 'F' :
         System.out.print("Enter your salary: " );
@@ -44,9 +54,10 @@ public class Main {
          status = Character.toUpperCase(scan.next().charAt(0));
          if (status == 'Y' || status == 'N') {
           boolean facultyStatus = status == 'Y'  ? true : false;
-          System.out.println(facultyStatus);
+          System.out.println("---------------------------");
         Faculty faculty = new Faculty(name, contactNumber, salary, department, facultyStatus);
         System.out.println(faculty);
+        System.out.println("---------------------------");
          }
          else {
           System.out.println("Please enter proper intput only");
@@ -58,15 +69,15 @@ public class Main {
           program = scan.nextLine();
           System.out.print("Enter your current year level: ");
           yearLevel = scan.nextInt();
+          System.out.println("---------------------------");
           Student student = new Student(name, contactNumber, program, yearLevel);
           System.out.println(student);
+          System.out.println("---------------------------");
         break;
-        default : 
-        System.out.println("Please enter a proper input only");
-        continue;
       }
     }catch (InputMismatchException e) {
       System.out.println("Please enter a proper input");
+      scan.nextLine();
       continue;
     }
       

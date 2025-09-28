@@ -1,4 +1,5 @@
 package SchoolJava;
+//the parent class
  class Person {
   private String name;
   private String contactNumb;
@@ -17,7 +18,6 @@ package SchoolJava;
     return contactNumb;
   }
   
-  //enter users info
   
   //setters 
   public void setName(String name) {
@@ -28,12 +28,8 @@ package SchoolJava;
   }
   
   
-public Person test() {
-  System.err.println("ts");
-return new Student("asd", "asd", "", 1);
-}
 
-  
+  //toString method for putting data so wit will be printed and the child classes can inherit this
   @Override
   public String toString(){
     return "Name: " + this.getName() + "\n" +

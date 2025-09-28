@@ -3,6 +3,7 @@ class Faculty extends Employee{
   private boolean status;
   
   Faculty(String name, String contactNumber, double salary, String department, boolean status) {
+     //use the super class to get the data from the parent class
     super(name, contactNumber, salary, department);
     this.status = status;
   }

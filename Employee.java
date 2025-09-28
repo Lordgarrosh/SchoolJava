@@ -4,6 +4,7 @@
   private String department;
   
   Employee (String name, String contactNumb, double salary, String department) {
+    //use the super class to get the data from the parent class
     super(name,contactNumb);
    this.salary = salary;
    this.department = department;
@@ -27,7 +28,7 @@ public void setDepartment(String department) {
   this.department = department;
 }
 
-//toString method for putting data
+
 @Override
 public String toString(){
   return super.toString() +
